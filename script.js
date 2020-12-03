@@ -60,18 +60,13 @@ class Calculator {
 
     getDisplayNumber(number){
         const stringNumber = number.toString();
-        console.log('stringNumber' + stringNumber);
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
-        console.log('integerDigits' + integerDigits);
         const decimalDigits = stringNumber.split('.')[1];
-        console.log('decimalDigits' + decimalDigits);
         let integerDisplay;
         if(isNaN(integerDigits)){
             integerDisplay = '';
-            console.log('integerDisplay' + integerDisplay);
         }else{
             integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0});
-            console.log('else integerDisplay' + integerDisplay);
 
         }
         if(decimalDigits !== undefined){
